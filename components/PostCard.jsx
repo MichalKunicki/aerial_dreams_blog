@@ -3,7 +3,6 @@ import moment from 'moment'
 import Link from 'next/link'
 
 const PostCard = ({ post }) => {
-  console.log(post)
   return (
     <div className="mb-8 rounded-lg bg-white p-0 pb-12 shadow-lg lg:p-8">
       <div className="relative mb-6 overflow-hidden pb-80 shadow-md">
@@ -55,7 +54,7 @@ const PostCard = ({ post }) => {
         {post.excerpt}
       </p>
       <div className="text-center">
-        <Link href={`/post/${post.link}`}>
+        <Link href={`/post/${post.slug}`}>
           <span className="inline-block transform cursor-pointer rounded-full bg-pink-600 px-6 py-2 text-lg font-medium text-white transition duration-500 hover:-translate-y-1">
             Continue Reading
           </span>
