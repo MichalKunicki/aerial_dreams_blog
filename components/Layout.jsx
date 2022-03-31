@@ -1,11 +1,12 @@
 import React from 'react'
 import { Header } from './'
+import { Intro } from './'
 
-const Layout = ( {children} ) => {
-  return(
+const Layout = ({ children }) => {
+  return (
     <>
       <Header />
-      { children }
+      {children}
     </>
   )
 }
