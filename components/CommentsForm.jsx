@@ -54,7 +54,7 @@ const CommentsForm = ({ slug }) => {
       <div className="mb-4 grid grid-cols-1 gap-4">
         <textarea
           ref={commentEl}
-          className="text-#000000-700 w-full rounded-lg bg-gray-100 p-4 outline-none focus:ring-2 focus:ring-gray-200"
+          className="text-[gray]-700 w-full rounded-lg bg-gray-100 p-4 outline-none focus:ring-2 focus:ring-gray-200"
           placeholder="Comment"
           name="comment"
         />
