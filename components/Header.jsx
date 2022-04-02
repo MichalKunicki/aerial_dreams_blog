@@ -12,7 +12,7 @@ const Header = () => {
   }, [])
 
   return (
-    <div className="container mx-auto bg-black px-6">
+    <div className="fixed left-0 top-0 z-10 mx-auto w-screen bg-black px-6">
       <div className="flex justify-between px-5 py-8 lg:justify-around lg:px-0">
         <div className="block md:float-left lg:mr-24">
           <Link href="/">
