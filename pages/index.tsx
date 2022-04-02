@@ -7,22 +7,22 @@ export default function Home({ posts }) {
   return (
     <div>
       <Head>
-        <title>Next/GraphQL Blog</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Aerial Dreams</title>
+        <link rel="icon" href="/logo.png" />
       </Head>
       {/* INTRO PAGE DIV */}
-      <div className="z-200 absolute w-full overflow-hidden">
+      <div className="absolute w-full overflow-hidden">
         <div className="flex justify-center">
           <video autoPlay loop muted className="">
             <source src="/bg.mp4" type="video/mp4" />
           </video>
-          <div className="left-50 absolute bottom-20">
-            <div className="relative h-screen w-14 animate-bounce rounded-full bg-orange-500 p-2 pb-3 opacity-50">
-              {/* <img
+          <div className="left-50 absolute bottom-10 2xl:bottom-48">
+            <div className="h-screen w-14 animate-bounce rounded-full bg-orange-500 p-2 pb-3 opacity-50">
+              <img
                 id="arrow"
-                className="relative h-24 w-14 opacity-100"
+                className="absolute bottom-0 h-24 w-10"
                 src="/arrow.svg"
-              ></img> */}
+              ></img>
             </div>
           </div>
         </div>
