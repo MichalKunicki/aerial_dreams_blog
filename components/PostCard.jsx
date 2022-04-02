@@ -5,16 +5,16 @@ import Link from 'next/link'
 const PostCard = ({ post }) => {
   return (
     <div className="mb-8 rounded-lg border-2 border-white bg-neutral-900 p-0 pb-12 shadow-lg lg:p-8">
-      <div className="relative mb-6 overflow-hidden pb-80 shadow-md">
+      <div className="relative mb-6 overflow-hidden shadow-md">
         <img
           src={post.featuredImage.url}
           alt={post.title}
-          className="absolute h-80 w-full rounded-t-lg object-cover object-top shadow-lg lg:rounded-lg"
+          className="relative w-full rounded-t-lg object-cover object-top shadow-lg lg:rounded-lg"
         />
       </div>
       <h1
         className="mb-8 cursor-pointer text-center text-3xl font-semibold text-white
-        transition duration-700 hover:text-pink-600
+        transition duration-700 hover:text-orange-500
       "
       >
         <Link href={`/post/${post.slug}`}>{post.title}</Link>
