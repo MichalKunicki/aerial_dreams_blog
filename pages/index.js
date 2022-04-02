@@ -16,7 +16,7 @@ export default function Home({ posts }) {
           <video autoPlay loop muted className="">
             <source src="/bg.mp4" type="video/mp4" />
           </video>
-          <div className="left-50 absolute bottom-10 2xl:bottom-48">
+          <div className="left-50 absolute bottom-6 xl:bottom-10 2xl:bottom-48">
             <div className="h-screen w-14 animate-bounce rounded-full bg-orange-500 p-2 pb-3 opacity-50">
               <img
                 id="arrow"
