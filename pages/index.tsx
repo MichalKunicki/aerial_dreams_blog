@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { PostCard, Categories, PostWidget } from '../components'
 import { getPosts } from '../services'
+import { FeaturedPosts } from '../sections'
 
 export default function Home({ posts }) {
   return (
@@ -10,7 +11,7 @@ export default function Home({ posts }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {/* INTRO PAGE DIV */}
-      <div className="absolute w-full overflow-hidden">
+      <div className="z-200 absolute w-full overflow-hidden">
         <div className="flex justify-center">
           <video autoPlay loop muted className="">
             <source src="/bg.mp4" type="video/mp4" />
@@ -33,6 +34,7 @@ export default function Home({ posts }) {
         </div>
       </div>
       {/* BLOG DIV */}
+      <FeaturedPosts />
       <div className="container mx-auto mb-8 p-4">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
           <div className="col-span-1 lg:col-span-8">

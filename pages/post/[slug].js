@@ -1,4 +1,5 @@
 import React from 'react'
+import { useRouter } from 'next/router'
 import { getPosts, getPostDetails } from '../../services'
 import {
   PostDetail,
@@ -7,9 +8,16 @@ import {
   Author,
   Comments,
   CommentsForm,
+  Loader,
 } from '../../components'
 
 const PostDetails = ({ post }) => {
+  const router = useRouter()
+
+  if (router.isFallback) {
+    return <Loader />
+  }
+
   return (
     <>
       <div className="container mx-auto mb-8 px-10">
