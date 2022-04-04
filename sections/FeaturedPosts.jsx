@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
 
@@ -80,7 +80,8 @@ const FeaturedPosts = () => {
         customLeftArrow={customLeftArrow}
         customRightArrow={customRightArrow}
         responsive={responsive}
-        itemClass="px-4"
+        itemClass="px-4 transition duration-500 hover:-translate-y-1"
+        ssr={true}
       >
         {dataLoaded &&
           featuredPosts.map((post, index) => (

@@ -40,7 +40,7 @@ const Header = () => {
         </div>
       </div>
       {isToggled && (
-        <div className="mb-1 lg:hidden">
+        <div className="mx-8 mb-1 lg:hidden">
           {categories.map((category) => (
             <Link key={category.slug} href={`/category/${category.slug}`}>
               <h1 className="transform cursor-pointer border-t-2 border-gray-800 py-4 text-right font-semibold text-white transition duration-200 hover:-translate-y-1 hover:text-orange-500">

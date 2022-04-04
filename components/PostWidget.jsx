@@ -17,7 +17,7 @@ const PostWidget = ({ categories, slug }) => {
   }, [slug])
 
   return (
-    <div className="mb-8 rounded-lg border-2 border-white bg-neutral-900 p-8 text-white shadow-lg">
+    <div className=" mb-8 rounded-lg border-2 border-neutral-800 bg-neutral-900 p-8 text-white shadow-lg">
       <h3 className="mb-8 border-b pb-4 text-xl font-semibold">
         {slug ? 'Related Posts' : 'Recent Posts'}
       </h3>
@@ -32,7 +32,7 @@ const PostWidget = ({ categories, slug }) => {
               src={post.featuredImage.url}
             />
           </div>
-          <div className="ml-4 flex-grow">
+          <div className="ml-4 flex-grow transition duration-300 hover:text-orange-500">
             <p className="font-xs text-gray-500">
               {moment(post.createdAt).format('MMM DD, YYYY')}
             </p>

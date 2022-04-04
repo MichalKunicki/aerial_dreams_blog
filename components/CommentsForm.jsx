@@ -47,14 +47,14 @@ const CommentsForm = ({ slug }) => {
   }
 
   return (
-    <div className="mb-8 rounded-lg border-2 border-white bg-neutral-900 p-8 pb-12 text-white shadow-lg">
+    <div className="mb-8 rounded-lg border-2 border-neutral-800 bg-neutral-900 p-8 pb-12 text-white shadow-lg">
       <h3 className="mb-8 border-b pb-4 text-xl font-semibold">
         Leave a Reply
       </h3>
       <div className="mb-4 grid grid-cols-1 gap-4">
         <textarea
           ref={commentEl}
-          className="text-[gray]-700 w-full rounded-lg bg-gray-100 p-4 outline-none focus:ring-2 focus:ring-gray-200"
+          className="text-[gray]-700 w-full rounded-lg bg-gray-100 p-4 text-gray-700 outline-none focus:ring-2 focus:ring-gray-200"
           placeholder="Comment"
           name="comment"
         />
@@ -83,10 +83,10 @@ const CommentsForm = ({ slug }) => {
             id="storeData"
             name="storeData"
             value="true"
-            className="ml-1 rounded-full accent-pink-500"
+            className="ml-1 rounded-full accent-orange-500"
           />
           <label
-            className="ml-2 cursor-pointer text-gray-500"
+            className="ml-2 cursor-pointer text-gray-400"
             htmlFor="storeData"
           >
             Save my name and e-mail for the next time I comment.

@@ -1,9 +1,13 @@
+import React, { useRef } from 'react'
 import Head from 'next/head'
 import { PostCard, Categories, PostWidget } from '../components'
 import { getPosts } from '../services'
 import { FeaturedPosts } from '../sections'
 
 export default function Home({ posts }) {
+  const carousel = useRef(null)
+  const executeScroll = () => carousel.current.scrollIntoView(true)
+
   return (
     <div>
       <Head>
@@ -28,13 +32,18 @@ export default function Home({ posts }) {
         </div>
       </div>
       <div className="relative flex justify-center bg-transparent">
-        <div className="my-64 transform cursor-pointer rounded-full border-4 border-orange-100 bg-orange-700 p-12 text-white transition duration-500 hover:-translate-y-3 hover:bg-black hover:text-orange-500 md:my-80">
+        <div
+          onClick={executeScroll}
+          className="my-64 transform cursor-pointer rounded-full border-4 border-orange-100 bg-orange-700 p-12 text-white transition duration-500 hover:-translate-y-3 hover:bg-black hover:text-orange-500 md:my-80"
+        >
           <h1 className="text-4xl">Explore</h1>
           <h2 className="text-4xl">Aerial Dreams</h2>
         </div>
       </div>
       {/* BLOG DIV */}
-      <FeaturedPosts />
+      <div ref={carousel} className="scroll-mt-32">
+        <FeaturedPosts />
+      </div>
       <div className="container mx-auto mb-8 p-4">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
           <div className="col-span-1 lg:col-span-8">
@@ -43,9 +52,9 @@ export default function Home({ posts }) {
             ))}
           </div>
           <div className="col-span-1 lg:col-span-4">
-            <div className="relative top-8 lg:sticky">
+            <div className="relative top-28 lg:sticky">
               <PostWidget />
-              <Categories />
+              {/* <Categories /> */}
             </div>
           </div>
         </div>
