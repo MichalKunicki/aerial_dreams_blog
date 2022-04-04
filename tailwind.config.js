@@ -6,14 +6,14 @@ module.exports = {
   theme: {
     extend: {
       keyframes: {
-        custom_pulse: {
+        custom: {
           '0%, 100%': { transform: 'scale(1.2)' },
           '50%': { transform: 'scale(1.1)' },
         },
       },
       animation: {
         bounce: 'bounce 4s infinite',
-        custom_pulse: 'custom_pulse 4.5s infinite',
+        custom: 'custom 4.5s infinite',
       },
     },
     screens: {

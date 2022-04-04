@@ -74,7 +74,7 @@ const FeaturedPosts = () => {
   )
 
   return (
-    <div id="carousel" className="relative mb-8">
+    <div id="carousel" className="relative mb-2 mt-8">
       {/* Max Width specified in globals.scss */}
       <Carousel
         id="carousel"
