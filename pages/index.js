@@ -31,7 +31,7 @@ export default function Home({ posts }) {
           </div>
         </div>
       </div>
-      <div className="relative flex justify-center bg-transparent">
+      <div className="motion-safe:animate-custom_pulse relative flex justify-center bg-transparent">
         <div
           onClick={executeScroll}
           className="my-64 transform cursor-pointer rounded-full border-4 border-orange-100 bg-orange-700 p-12 text-white transition duration-500 hover:-translate-y-3 hover:bg-black hover:text-orange-500 md:my-80"
