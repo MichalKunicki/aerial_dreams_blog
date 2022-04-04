@@ -6,6 +6,7 @@ import Hamburger from 'hamburger-react'
 const Header = () => {
   const [categories, setCategories] = useState([])
   const [isToggled, setIsToggled] = useState(false)
+  const hide = () => setIsToggled(false)
 
   useEffect(() => {
     getCategories().then((newCategories) => setCategories(newCategories))
@@ -43,7 +44,10 @@ const Header = () => {
         <div className="mx-8 mb-1 lg:hidden">
           {categories.map((category) => (
             <Link key={category.slug} href={`/category/${category.slug}`}>
-              <h1 className="transform cursor-pointer border-t-2 border-gray-800 py-4 text-right font-semibold text-white transition duration-200 hover:-translate-y-1 hover:text-orange-500">
+              <h1
+                onClick={hide}
+                className="transform cursor-pointer border-t-2 border-gray-800 py-4 text-right font-semibold text-white transition duration-200 hover:-translate-y-1 hover:text-orange-500"
+              >
                 {category.name}
               </h1>
             </Link>
