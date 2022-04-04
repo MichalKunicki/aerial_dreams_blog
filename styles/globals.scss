@@ -46,6 +46,13 @@ video {
   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(158deg) brightness(106%) contrast(102%);
   background-color: transparent;
 }
+@media screen and (min-width: 2200px) {
+  #carousel {
+    max-width: 2200px;
+    left: 0%;
+    margin: auto;
+  }
+}
 
 .text-shadow{
   text-shadow: 0px 2px 0px rgb(0 0 0 / 30%);
