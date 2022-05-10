@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import Head from 'next/head'
-import { PostCard, Categories, PostWidget } from '../components'
+import { PostCard, PostWidget } from '../components'
 import { getPosts } from '../services'
 import { FeaturedPosts } from '../sections'
 
