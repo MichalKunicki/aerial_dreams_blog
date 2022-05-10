@@ -17,7 +17,7 @@ export default function Home({ posts }) {
       {/* INTRO PAGE DIV */}
       <div className="absolute w-full overflow-hidden">
         <div className="flex justify-center">
-          <video autoPlay loop muted className="">
+          <video autoPlay loop muted playsInline>
             <source src="/bg.mp4" type="video/mp4" />
           </video>
           <div className="left-50 absolute bottom-6 xl:bottom-10 2xl:bottom-48">
