@@ -3,6 +3,7 @@ import Head from 'next/head'
 import { PostCard, PostWidget } from '../components'
 import { getPosts } from '../services'
 import { FeaturedPosts } from '../sections'
+import poster from '../public/poster.jpg'
 
 export default function Home({ posts }) {
   const carousel = useRef(null)
@@ -17,7 +18,7 @@ export default function Home({ posts }) {
       {/* INTRO PAGE DIV */}
       <div className="absolute w-full overflow-hidden">
         <div className="flex justify-center">
-          <video autoPlay loop muted playsInline>
+          <video autoPlay loop muted playsInline poster={poster}>
             <source src="/bg.mp4" type="video/mp4" />
           </video>
           <div className="left-50 absolute bottom-6 xl:bottom-10 2xl:bottom-48">
